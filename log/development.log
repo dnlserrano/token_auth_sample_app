@@ -1,0 +1,279 @@
+
+
+Started GET "/" for ::1 at 2015-04-05 02:22:23 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (3.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.8ms)
+Completed 200 OK in 26ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 02:47:36 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 10ms
+  [1m[36mUser Load (7.1ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'daniel.serrano@talkdesk.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT  1 AS one FROM "users" WHERE "users"."username" = 'dnlserrano' LIMIT 1
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "users" ("username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["username", "dnlserrano"], ["email", "daniel.serrano@talkdesk.com"], ["encrypted_password", "$2a$10$bMid9cIJYWQSrxdHnjSnkufKJ5Xi/ff.Rd7NYqNWXnqG8YALJIe4W"], ["created_at", "2015-04-05 01:53:13.354429"], ["updated_at", "2015-04-05 01:53:13.354429"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 02:53:51 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 02:54:40 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 02:57:34 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 03:00:47 +0100
+Processing by Users::SessionsController#create as JSON
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 03:00:59 +0100
+Processing by Users::SessionsController#create as JSON
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 03:08:19 +0100
+Processing by Users::SessionsController#create as JSON
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 03:11:08 +0100
+Processing by Users::SessionsController#create as JSON
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 03:12:37 +0100
+Processing by Users::SessionsController#create as JSON
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 03:12:48 +0100
+Processing by Users::SessionsController#create as JSON
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 03:26:51 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]"}}
+Can't verify CSRF token authenticity
+Completed 401 Unauthorized in 1ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-05 03:27:23 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"daniel.serrano@talkdesk.com"}}
+Can't verify CSRF token authenticity
+  [1m[35mUser Load (3.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "daniel.serrano@talkdesk.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.1ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7  [["last_sign_in_at", "2015-04-05 02:27:23.842096"], ["current_sign_in_at", "2015-04-05 02:27:23.842096"], ["last_sign_in_ip", "127.0.0.1/32"], ["current_sign_in_ip", "127.0.0.1/32"], ["sign_in_count", 1], ["updated_at", "2015-04-05 02:27:23.855837"], ["id", 1]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (1.5ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'dnlserrano' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["token", "2439f10ba1945bcb51fe5f6536183755cc7270a854ca82d4b6e3090acad0ac3a"], ["updated_at", "2015-04-05 02:27:23.896411"], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 301ms (Views: 0.9ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/" for ::1 at 2015-04-12 15:54:48 +0100
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `initialize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `new'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:651:in `connect'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:242:in `initialize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `new'
+  activerecord (4.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:44:in `postgresql_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:436:in `new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:446:in `checkout_new_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:422:in `acquire_connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:349:in `block in checkout'
+  /Users/dnlserrano/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:348:in `checkout'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:263:in `block in connection'
+  /Users/dnlserrano/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:262:in `connection'
+  activerecord (4.2.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:565:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.2.0) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:384:in `connection'
+  activerecord (4.2.0) lib/active_record/migration.rb:371:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `call'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:88:in `_run_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:734:in `_run_call_callbacks'
+  activesupport (4.2.0) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.1.0) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /Users/dnlserrano/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/dnlserrano/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/dnlserrano/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.4ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.0/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.0/lib/web_console/templates/style.css within layouts/inlined_string (0.7ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.0/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.6ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.0/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.0/lib/web_console/templates/console.js within layouts/javascript (151.7ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.0/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.0/lib/web_console/templates/error_page.js within layouts/javascript (0.5ms)
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/web-console-2.1.0/lib/web_console/templates/index.html (237.2ms)
+
+
+Started GET "/" for ::1 at 2015-04-12 15:55:44 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (2.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/dnlserrano/.rvm/gems/ruby-2.2.1/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (3.3ms)
+Completed 200 OK in 29ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-12 16:39:58 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"daniel.serrano@talkdesk.com"}}
+Can't verify CSRF token authenticity
+  [1m[35mUser Load (7.9ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "daniel.serrano@talkdesk.com"]]
+Completed 401 Unauthorized in 206ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-12 16:39:59 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"daniel.serrano@talkdesk.com"}}
+Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "daniel.serrano@talkdesk.com"]]
+Completed 401 Unauthorized in 84ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-12 16:40:01 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"daniel.serrano@talkdesk.com"}}
+Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "daniel.serrano@talkdesk.com"]]
+Completed 401 Unauthorized in 90ms
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mUser Load (8.7ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (1.2ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'dnlserrano' AND "users"."id" != 1) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-12 16:41:09 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"daniel.serrano@talkdesk.com"}}
+Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "daniel.serrano@talkdesk.com"]]
+Completed 401 Unauthorized in 86ms
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'dnlserrano' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (9.5ms)[0m  [1mUPDATE "users" SET "encrypted_password" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["encrypted_password", "$2a$10$ej1E9Y7t6JPPHc7HbT4bGOadHrUHDLW/coOYW85PZF8vJP0/ZFbMq"], ["updated_at", "2015-04-12 15:41:28.275445"], ["id", 1]]
+  [1m[35m (1.9ms)[0m  COMMIT
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-12 16:41:33 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"daniel.serrano@talkdesk.com"}}
+Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "daniel.serrano@talkdesk.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = $4  [["current_sign_in_at", "2015-04-12 15:41:33.314232"], ["sign_in_count", 2], ["updated_at", "2015-04-12 15:41:33.316964"], ["id", 1]]
+  [1m[36m (9.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.6ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'dnlserrano' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["token", "629c8d09c1e267ba9fcc6afcc3b61c3f0a4c8e3429c1d07c51396547b251409d"], ["updated_at", "2015-04-12 15:41:33.351296"], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 156ms (Views: 1.6ms | ActiveRecord: 11.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-12 16:57:55 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"daniel.serrano@talkdesk.com"}}
+Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "daniel.serrano@talkdesk.com"]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5  [["last_sign_in_at", "2015-04-12 15:41:33.314232"], ["current_sign_in_at", "2015-04-12 15:57:55.403615"], ["sign_in_count", 3], ["updated_at", "2015-04-12 15:57:55.407157"], ["id", 1]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE ("users"."username" = 'dnlserrano' AND "users"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3  [["token", "cba227cd7c585f4f6ccb982f83909ea8c84142b94131ea496ba75ead49619e4f"], ["updated_at", "2015-04-12 15:57:55.416429"], ["id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 201 Created in 136ms (Views: 0.5ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-12 16:58:03 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"a"}}
+Can't verify CSRF token authenticity
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1  [["email", "a"]]
+Completed 401 Unauthorized in 2ms
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2015-04-12 17:02:35 +0100
+Processing by Users::SessionsController#create as JSON
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "email"=>"daniel.serrano@talkdesk.com"}}
+Can't verify CSRF token authenticity
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."email" = $1  ORDER BY "users"."id" ASC LIMIT 1[0m  [["email", "daniel.serrano@talkdesk.com"]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["last_sign_in_at", "2015-04-12 15:57:55.403615"], ["current_sign_in_at", "2015-04-12 16:02:35.251129"], ["sign_in_count", 4], ["updated_at", "2015-04-12 16:02:35.252809"], ["id", 1]]
+  [1m[35m (8.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT  1 AS one FROM "users" WHERE ("users"."username" = 'dnlserrano' AND "users"."id" != 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["token", "e1c9c6fd9c3dd6f6eea51da68e4be3ff731a26b0e7094b96b4f960b4d4bef326"], ["updated_at", "2015-04-12 16:02:35.267084"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+Completed 201 Created in 137ms (Views: 0.4ms | ActiveRecord: 11.1ms)
